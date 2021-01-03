@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="container">
+  <br>
+<div class="row">
+  <div class=" col-md-12 col-sm-28">
+    <div class="card" *ngFor="let b of books" >
+      <div class="card-body">
+        <h2 class="card-title">Title: {{b.title}}</h2>
+        <h3 class="card-subtitle">Author: {{b.author}}</h3>
+        <p class="card-text">Price : {{b.price}} USD</p>
+        <button class="btn btn-warning" (click)="openDialog(b)">Add to cart</button><br>
+        <button class="btn btn-info" [routerLink]="['/update/',b.id]" >Edit</button>
+        <button class="btn btn-danger" (click)="delete(b.id)" >Delete</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>

@@ -1,0 +1,36 @@
+<div class="container">
+  <br>
+<form [formGroup]="booksForm">
+
+  <div class="form-group row">
+    <label for="author" class="col-sm-2 col-form-label">Author</label>
+    <div class="col-sm-10">
+      <input type="text" formControlName="author" class="form-control" id="author" placeholder="Book's author">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="title" class="col-sm-2 col-form-label">Price</label>
+    <div class="col-sm-10">
+      <input type="number" formControlName="price" class="form-control" id="price" placeholder="Book's price">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="releaseDate" class="col-sm-2 col-form-label">Date</label>
+    <div class="col-sm-10">
+      <input type="date" formControlName="releaseDate"  ng-controller="releaseDate"class="form-control" id="date" placeholder="Book's release date">
+    </div>
+  </div>
+  <div class="form-group row">
+  <label for="title" class="col-sm-2 col-form-label">Title</label>
+  <div class="col-sm-10">
+    <input type="text" formControlName="title" class="form-control" id="title" placeholder="Book's title">
+  </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-success" (click)="update()">Update</button>
+      <button type="submit" class="btn btn-warning ml-1" [routerLink]="['']">Cancel</button>
+    </div>
+  </div>
+</form>
+</div>
